@@ -17,7 +17,7 @@ turning complex ideas into elegant, reliable solutions.`,
     leetcode:   'https://leetcode.com/u/Akshata1805/',
     hackerrank: 'https://www.hackerrank.com/profile/akshatasmhase123',
   },
-  resume: '/Akshata_Sopan_Mhase.pdf',  // place resume in /public folder
+  resume: '/Akshata_Sopan_Mhase.pdf',
 }
 
 export const stats = [
@@ -137,10 +137,30 @@ export const certifications = [
   },
 ]
 
+// ─── ACHIEVEMENTS ─────────────────────────────────────────────
+// certImage: path to certificate image inside the /public/certs/ folder
+// Example: '/certs/preccon.jpg' means place the file at public/certs/preccon.jpg
+// Set certImage to null if you don't have an image yet
+
 export const achievements = [
-  { icon: '🏆', title: '1st Rank — PRECCON-2025',    desc: 'National-level paper presentation competition winner, showcasing research and communication excellence.' },
-  { icon: '🌐', title: 'Virtual Vista 2.0 Finalist', desc: 'Selected for the final round by IEEE Computer Society, GNITC.' },
-  { icon: '🎓', title: 'VidyaVikas Scholarship',     desc: 'Awarded by FUEL NGO (powered by Eaton) for outstanding academic excellence.' },
+  {
+    icon:      '🏆',
+    title:     '1st Rank — PRECCON-2025',
+    desc:      'National-level paper presentation competition winner, showcasing research and communication excellence.',
+    certImage: '/certs/preccon.jpg',      // ← place your image at public/certs/preccon.jpg
+  },
+  {
+    icon:      '🌐',
+    title:     'Virtual Vista 2.0 Finalist',
+    desc:      'Selected for the final round by IEEE Computer Society, GNITC.',
+    certImage: '/certs/virtual-vista.jpg', // ← place your image at public/certs/virtual-vista.jpg
+  },
+  {
+    icon:      '🎓',
+    title:     'VidyaVikas Scholarship',
+    desc:      'Awarded by FUEL NGO (powered by Eaton) for outstanding academic excellence.',
+    certImage: '/certs/vidyavikas.jpg',    // ← place your image at public/certs/vidyavikas.jpg
+  },
 ]
 
 export const hobbies = [
@@ -154,14 +174,14 @@ export const hobbies = [
 ]
 
 export const books = [
-  { title: 'Atomic Habits',            author: 'James Clear'                          },
-  { title: 'The Alchemist',            author: 'Paulo Coelho'                         },
-  { title: 'Rich Dad Poor Dad',        author: 'Robert T. Kiyosaki'                   },
-  { title: 'Wings of Fire',            author: 'A.P.J. Abdul Kalam'                   },
-  { title: 'Deep Work',                author: 'Cal Newport'                          },
-  { title: 'The Pragmatic Programmer', author: 'Andrew Hunt & David Thomas'           },
-  { title: 'Ikigai',                   author: 'Héctor García & Francesc Miralles'    },
-  { title: 'You Can Win',              author: 'Shiv Khera'                           },
+  { title: 'Atomic Habits',            author: 'James Clear'                       },
+  { title: 'The Alchemist',            author: 'Paulo Coelho'                      },
+  { title: 'Rich Dad Poor Dad',        author: 'Robert T. Kiyosaki'               },
+  { title: 'Wings of Fire',            author: 'A.P.J. Abdul Kalam'               },
+  { title: 'Deep Work',                author: 'Cal Newport'                       },
+  { title: 'The Pragmatic Programmer', author: 'Andrew Hunt & David Thomas'        },
+  { title: 'Ikigai',                   author: 'Héctor García & Francesc Miralles' },
+  { title: 'You Can Win',              author: 'Shiv Khera'                        },
 ]
 
 export const drawings = [

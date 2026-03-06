@@ -198,8 +198,8 @@ export const drawings = [
 ]
 
 export const languages = [
-  { flag: '🇮🇳', name: 'Marathi' },
-  { flag: '🇮🇳', name: 'Hindi'   },
-  { flag: '🇬🇧', name: 'English' },
-  { flag: '🇯🇵', name: 'Japanese'},
+  { flag: 'MR', name: 'Marathi' },
+  { flag: 'HI', name: 'Hindi'   },
+  { flag: 'EN', name: 'English' },
+  { flag: 'JP', name: 'Japanese'},
 ]

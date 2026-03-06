@@ -1,5 +1,4 @@
 // ─── PORTFOLIO DATA ───────────────────────────────────────────
-// Edit this file to update all content across the portfolio.
 
 export const meta = {
   name:     'Akshata Mhase',
@@ -137,29 +136,24 @@ export const certifications = [
   },
 ]
 
-// ─── ACHIEVEMENTS ─────────────────────────────────────────────
-// certImage: path to certificate image inside the /public/certs/ folder
-// Example: '/certs/preccon.jpg' means place the file at public/certs/preccon.jpg
-// Set certImage to null if you don't have an image yet
-
 export const achievements = [
   {
     icon:      '🏆',
     title:     '1st Rank — PRECCON-2025',
     desc:      'National-level paper presentation competition winner, showcasing research and communication excellence.',
-    certImage: '/certs/preccon.jpeg',      // ← place your image at public/certs/preccon.jpg
+    certImage: '/certs/preccon.jpg',
   },
   {
     icon:      '🌐',
     title:     'Virtual Vista 2.0 Finalist',
     desc:      'Selected for the final round by IEEE Computer Society, GNITC.',
-    certImage: '/certs/virtual-vista.jpg', // ← place your image at public/certs/virtual-vista.jpg
+    certImage: '/certs/virtual-vista.jpg',
   },
   {
     icon:      '🎓',
     title:     'VidyaVikas Scholarship',
     desc:      'Awarded by FUEL NGO (powered by Eaton) for outstanding academic excellence.',
-    certImage: '/certs/vidyavikas.jpg',    // ← place your image at public/certs/vidyavikas.jpg
+    certImage: '/certs/vidyavikas.jpg',
   },
 ]
 
@@ -173,24 +167,34 @@ export const hobbies = [
   { icon: '🖼️', name: 'Arts & Crafts', modal: null       },
 ]
 
+// ─── BOOKS — organized by language ────────────────────────────
 export const books = [
-  { title: 'Atomic Habits',            author: 'James Clear'                       },
-  { title: 'The Alchemist',            author: 'Paulo Coelho'                      },
-  { title: 'Rich Dad Poor Dad',        author: 'Robert T. Kiyosaki'               },
-  { title: 'Wings of Fire',            author: 'A.P.J. Abdul Kalam'               },
-  { title: 'Deep Work',                author: 'Cal Newport'                       },
-  { title: 'The Pragmatic Programmer', author: 'Andrew Hunt & David Thomas'        },
-  { title: 'Ikigai',                   author: 'Héctor García & Francesc Miralles' },
-  { title: 'You Can Win',              author: 'Shiv Khera'                        },
+  // Marathi
+  { title: 'श्रीमानयोगी (Shrimanyogi)',     author: 'Ranjit Desai',    lang: '🇮🇳 Marathi' },
+  { title: 'स्वामी (Swami)',                author: 'Ranjit Desai',    lang: '🇮🇳 Marathi' },
+  { title: 'राधेय (Radhey)',                author: 'Ranjit Desai',    lang: '🇮🇳 Marathi' },
+  { title: 'अतर्क्य (Atarkya)',             author: 'Sanjay Sonawani', lang: '🇮🇳 Marathi' },
+  { title: 'काळे पाणी (Kaale Paani)',       author: 'N. S. Inamdar',   lang: '🇮🇳 Marathi' },
+  { title: 'ययाती (Yayati)',                author: 'V. S. Khandekar', lang: '🇮🇳 Marathi' },
+  { title: 'अश्रू (Ashru)',                 author: 'Vishwas Patil',   lang: '🇮🇳 Marathi' },
+
+  // Hindi
+  { title: 'October Junction',              author: 'Piyush Jain',     lang: '🇮🇳 Hindi'   },
+  { title: 'The Hidden Hindu',              author: 'Akshat Gupta',    lang: '🇮🇳 Hindi'   },
+  { title: 'Yaar Papa',                     author: 'Ravinder Singh',  lang: '🇮🇳 Hindi'   },
+
+  // English
+  { title: 'Pride and Prejudice',           author: 'Jane Austen',     lang: '🇬🇧 English' },
+  { title: 'The Monk Who Sold His Ferrari', author: 'Robin Sharma',    lang: '🇬🇧 English' },
 ]
 
 export const drawings = [
-  { icon: '🌸', label: 'Floral Watercolour' },
-  { icon: '🌄', label: 'Landscape Sketch'   },
-  { icon: '🦋', label: 'Butterfly Study'    },
-  { icon: '🏠', label: 'Architecture Sketch'},
-  { icon: '🌿', label: 'Botanical Art'      },
-  { icon: '✏️', label: 'Portrait Drawing'  },
+  { icon: '🌸', label: 'Floral Watercolour'  },
+  { icon: '🌄', label: 'Landscape Sketch'    },
+  { icon: '🦋', label: 'Butterfly Study'     },
+  { icon: '🏠', label: 'Architecture Sketch' },
+  { icon: '🌿', label: 'Botanical Art'       },
+  { icon: '✏️', label: 'Portrait Drawing'   },
 ]
 
 export const languages = [

@@ -1,62 +1,40 @@
-import { useEffect, useRef } from 'react'
 import { meta } from '../data/portfolioData'
 
+function navTo(e, id) {
+  e.preventDefault()
+  const el = document.getElementById(id)
+  if (!el) return
+  const navH = document.querySelector('.nav')?.offsetHeight || 70
+  window.scrollTo({ top: el.getBoundingClientRect().top + window.pageYOffset - navH - 24, behavior: 'smooth' })
+}
+
 export default function Hero() {
-  const heroRef = useRef(null)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          heroRef.current?.querySelectorAll('.animate-in').forEach((el, i) => {
-            el.style.animationDelay = `${i * 0.18}s`
-            el.classList.add('visible')
-          })
-        }
-      },
-      { threshold: 0.1 }
-    )
-    if (heroRef.current) observer.observe(heroRef.current)
-    return () => observer.disconnect()
-  }, [])
-
   return (
-    <section className="hero" id="hero" ref={heroRef}>
-      {/* Orbit rings */}
-      <div className="orbit o1"><div className="orbit-dot" /></div>
-      <div className="orbit o2"><div className="orbit-dot" /></div>
-      <div className="orbit o3"><div className="orbit-dot" /></div>
+    <div className="hero" id="hero">
+      <div className="orbit-ring o1"><div className="odot" /></div>
+      <div className="orbit-ring o2"><div className="odot" /></div>
+      <div className="orbit-ring o3"><div className="odot" /></div>
 
-      <div className="hero-content">
-        <p className="hero-badge animate-in">✦ {meta.title} ✦</p>
-
-        {/* ── NAME — reduced from clamp(3rem,12vw,7.5rem) to clamp(2.2rem,7vw,5rem) ── */}
-        <h1 className="hero-name animate-in">
-          {meta.name.split(' ').map((word, i) => (
-            <span key={i} className="name-word">{word}</span>
-          ))}
-        </h1>
-
-        <p className="hero-summary animate-in">{meta.summary}</p>
-
-        <div className="hero-meta animate-in">
-          <span>{meta.location}</span>
-          <span>B.E. CS &amp; Design</span>
-          <span>8.08 CGPA</span>
-          <span>PRECCON-2025 🏆</span>
-        </div>
-
-        <div className="hero-cta animate-in">
-          <a href="#projects" className="btn btn-primary">View Projects</a>
-          <a href="#contact"  className="btn btn-ghost">Get In Touch</a>
-          <a href={meta.resume} target="_blank" rel="noreferrer" className="btn btn-outline">📄 Resume</a>
-        </div>
+      <p className="hero-badge">✦ {meta.title} ✦</p>
+      <h1 className="hero-name">
+        {meta.name.split(' ')[0]}<br />{meta.name.split(' ').slice(1).join(' ')}
+      </h1>
+      <p className="hero-summary">{meta.summary}</p>
+      <div className="hero-meta">
+        <span>{meta.location}</span>
+        <span>B.E. Computer Science &amp; Design</span>
+        <span>8.08 CGPA</span>
+        <span>PRECCON-2025 Champion 🏆</span>
       </div>
-
-      <div className="scroll-hint animate-in">
+      <div className="hero-cta">
+        <a href="#projects" onClick={e => navTo(e,'projects')} className="btn btn-primary">View Projects</a>
+        <a href="#contact"  onClick={e => navTo(e,'contact')}  className="btn btn-ghost">Get In Touch</a>
+        <a href={meta.resume} target="_blank" rel="noreferrer" className="btn btn-outline">📄 Resume</a>
+      </div>
+      <div className="scroll-hint">
         <span>scroll</span>
         <div className="scroll-line" />
       </div>
-    </section>
+    </div>
   )
 }

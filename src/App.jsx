@@ -16,14 +16,10 @@ import Footer    from './components/Footer'
 import useShootingStars from './hooks/useShootingStars'
 
 function App() {
-  // ── Read saved theme on first load (default: dark) ──
-  const [theme, setTheme] = useState(() => {
-    return localStorage.getItem('pf-theme') || 'dark'
-  })
+  const [theme, setTheme] = useState('dark')
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme)
-    localStorage.setItem('pf-theme', theme)   // save so it survives refresh
   }, [theme])
 
   const toggleTheme = () => setTheme(t => t === 'dark' ? 'light' : 'dark')
@@ -32,20 +28,25 @@ function App() {
 
   return (
     <>
+      {/* Background layers */}
       <GalaxyBg theme={theme} />
       <div className="nebula nebula-1" />
       <div className="nebula nebula-2" />
       <div className="nebula nebula-3" />
 
+      {/* Custom cursor */}
       <Cursor theme={theme} />
 
+      {/* Theme toggle */}
       <button className="theme-toggle" onClick={toggleTheme}>
         <span>{theme === 'dark' ? '☀️' : '🌙'}</span>
         <span>{theme === 'dark' ? 'Light' : 'Dark'}</span>
       </button>
 
+      {/* Navigation */}
       <Nav />
 
+      {/* Page content */}
       <div className="page">
         <Hero />
         <div className="cosmic-divider" />

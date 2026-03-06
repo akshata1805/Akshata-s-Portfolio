@@ -147,7 +147,7 @@ export const achievements = [
     icon:      '🏆',
     title:     '1st Rank — PRECCON-2025',
     desc:      'National-level paper presentation competition winner, showcasing research and communication excellence.',
-    certImage: '/certs/preccon.jpg',      // ← place your image at public/certs/preccon.jpg
+    certImage: '/certs/preccon.jpeg',      // ← place your image at public/certs/preccon.jpg
   },
   {
     icon:      '🌐',
